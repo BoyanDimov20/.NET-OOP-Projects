@@ -12,9 +12,15 @@ namespace NewEstablishment
 
         static void Main(string[] args)
         {
+            Console.Write("Enter your galaxy size: ");
             n = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Choose your difficulty between \"Easy\" and \"Hard\": " );
+            string difficult = Console.ReadLine();
+            
+
             galaxy = new char[n, n];
-            bool wentVoid = false;
+          //  GenerateGalaxy();
 
             for (int i = 0; i < n; i++)
             {
@@ -51,20 +57,14 @@ namespace NewEstablishment
                 }
                 else if (!IsSave(command))
                 {
-                    wentVoid = true;
                     break;
                 }
 
-               //  Testing
-                for (int i = 0; i < n; i++)
+                if (difficult == "Easy")
                 {
-                    Console.WriteLine();
-                    for (int j = 0; j < n; j++)
-                    {
-                        Console.Write(galaxy[i,j]);
-                    }
+                    ShowGalaxy();
                 }
-                Console.WriteLine();
+                
                 
             }
             if (starPower >= 50)
@@ -88,6 +88,24 @@ namespace NewEstablishment
             }
 
 
+        }
+
+        private static void GenerateGalaxy()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void ShowGalaxy()
+        {
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write(galaxy[i, j]);
+                }
+            }
+            Console.WriteLine();
         }
 
         private static void Up()

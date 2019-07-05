@@ -695,11 +695,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Boyan\\Documents\\GitHub\\C# Advanced\\Space Station Establishment\\Space Station Establishment\\Space Station Establishment.csproj",
+      "projectUniqueName": "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\Space Station Establishment\\Space Station Establishment\\Space Station Establishment.csproj",
       "projectName": "Space Station Establishment",
-      "projectPath": "C:\\Users\\Boyan\\Documents\\GitHub\\C# Advanced\\Space Station Establishment\\Space Station Establishment\\Space Station Establishment.csproj",
+      "projectPath": "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\Space Station Establishment\\Space Station Establishment\\Space Station Establishment.csproj",
       "packagesPath": "C:\\Users\\Boyan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Boyan\\Documents\\GitHub\\C# Advanced\\Space Station Establishment\\Space Station Establishment\\obj\\",
+      "outputPath": "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\Space Station Establishment\\Space Station Establishment\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -20,3 +20,14 @@ C:\Users\Boyan\Documents\GitHub\C# Advanced\Space Station Establishment\Space St
 C:\Users\Boyan\Documents\GitHub\C# Advanced\Space Station Establishment\Space Station Establishment\obj\Debug\netcoreapp2.1\Space Station Establishment.AssemblyInfo.cs
 C:\Users\Boyan\Documents\GitHub\C# Advanced\Space Station Establishment\Space Station Establishment\obj\Debug\netcoreapp2.1\Space Station Establishment.dll
 C:\Users\Boyan\Documents\GitHub\C# Advanced\Space Station Establishment\Space Station Establishment\obj\Debug\netcoreapp2.1\Space Station Establishment.pdb
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\bin\Debug\netcoreapp2.1\Space Station Establishment.deps.json
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\bin\Debug\netcoreapp2.1\Space Station Establishment.runtimeconfig.json
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\bin\Debug\netcoreapp2.1\Space Station Establishment.runtimeconfig.dev.json
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\bin\Debug\netcoreapp2.1\Space Station Establishment.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\bin\Debug\netcoreapp2.1\Space Station Establishment.pdb
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\obj\Debug\netcoreapp2.1\Space Station Establishment.csprojAssemblyReference.cache
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\obj\Debug\netcoreapp2.1\Space Station Establishment.csproj.CoreCompileInputs.cache
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\obj\Debug\netcoreapp2.1\Space Station Establishment.AssemblyInfoInputs.cache
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\obj\Debug\netcoreapp2.1\Space Station Establishment.AssemblyInfo.cs
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\obj\Debug\netcoreapp2.1\Space Station Establishment.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\Space Station Establishment\Space Station Establishment\obj\Debug\netcoreapp2.1\Space Station Establishment.pdb
