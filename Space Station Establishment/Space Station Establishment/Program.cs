@@ -17,24 +17,12 @@ namespace NewEstablishment
 
             Console.WriteLine("Choose your difficulty between \"Easy\" and \"Hard\": " );
             string difficult = Console.ReadLine();
-            
 
             galaxy = new char[n, n];
-          //  GenerateGalaxy();
+            GenerateGalaxy();
 
-            for (int i = 0; i < n; i++)
-            {
-                var command = Console.ReadLine().ToCharArray();
-                for (int j = 0; j < n; j++)
-                {
-                    if (command[j] == 'S')
-                    {
-                        myRow = i;
-                        myCol = j;
-                    }
-                    galaxy[i, j] = command[j];
-                }
-            }
+           // ReadMatrix();
+            
 
             while (starPower < 50)
             {
@@ -90,9 +78,49 @@ namespace NewEstablishment
 
         }
 
+        private static void ReadMatrix()
+        {
+            for (int i = 0; i < n; i++) 
+            {
+                var command = Console.ReadLine().ToCharArray();
+                for (int j = 0; j < n; j++)
+                {
+                    if (command[j] == 'S')
+                    {
+                        myRow = i;
+                        myCol = j;
+                    }
+                    galaxy[i, j] = command[j];
+                }
+            }
+        }
+
         private static void GenerateGalaxy()
         {
-            throw new NotImplementedException();
+            Random rng = new Random();
+            int randRow = rng.Next(0, n);
+            int randCol = rng.Next(0, n);
+
+            for (int i = 0; i < n; ++i)
+            {
+                for (int j = 0; j < n; ++j)
+                {
+                    int randomNumber = rng.Next(1, 10);
+                    char randomValue = randomNumber.ToString()[0];  // LOL
+                    galaxy[i, j] = randomValue;
+
+                    int randomEmpty = rng.Next(0, 3);
+                    if (randomEmpty == 0)
+                    {
+                        galaxy[i, j] = '-';
+                    }
+                }
+            }
+            galaxy[randRow, randCol] = 'S';
+            myRow = randRow;
+            myCol = randCol;
+
+            ShowGalaxy();
         }
 
         private static void ShowGalaxy()
@@ -261,6 +289,7 @@ namespace NewEstablishment
                 myCol++;
             }
         }
+
         private static bool IsSave(string command)
         {
             if (command == "right")
