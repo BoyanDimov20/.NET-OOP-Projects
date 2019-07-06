@@ -21,12 +21,19 @@ namespace NewEstablishment
             galaxy = new char[n, n];
             GenerateGalaxy();
 
-           // ReadMatrix();
-            
+            // ReadMatrix();
+            Console.WriteLine();
+            Console.WriteLine("If u can't find your S, type \"Where am i\""); // helps finding your S
 
             while (starPower < 50)
             {
+                bool showedPlace = false;
                 var command = Console.ReadLine();
+                if (command == "Where am i")
+                {
+                    ShowMyPlace();
+                    showedPlace = true;
+                }
                 if (command == "right" && IsSave(command))
                 {
                     Right();
@@ -48,7 +55,7 @@ namespace NewEstablishment
                     break;
                 }
 
-                if (difficult == "Easy")
+                if (difficult == "Easy" && !showedPlace)
                 {
                     ShowGalaxy();
                 }
@@ -76,6 +83,23 @@ namespace NewEstablishment
             }
 
 
+        }
+
+        private static void ShowMyPlace()
+        {
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write(galaxy[i, j]);
+                    if (myRow == i && j == n - 1)
+                    {
+                        Console.Write("  <- Here you are");
+                    }
+                }
+            }
+            Console.WriteLine();
         }
 
         private static void ReadMatrix()
