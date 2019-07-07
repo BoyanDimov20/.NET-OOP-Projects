@@ -332,8 +332,20 @@ namespace NewEstablishment
                     return AskQuestion(income / 2);
                 }
             }
-            
         }
+        public void ShowRules()
+        {
+            Console.WriteLine("The symbol \'S\' is your position in the galaxy. ");
+            Console.WriteLine("The symbol \"-\" represents empty space.");
+            Console.WriteLine();
+            Console.WriteLine("You can move in all directions with the commands \"right\", \"left\", \"up\" and \"down\"");
+            Console.WriteLine();
+            Console.WriteLine("The goal is to collect 50 star power. ");
+            Console.WriteLine("If your answer is wrong, your star power income will be halfed.");
+            Console.WriteLine("In order to claim it you will be asked a math question.");
+        }
+
+
 
     }
 }
