@@ -7,6 +7,9 @@ namespace NewEstablishment
 
         static void Main(string[] args)
         {
+            Console.Write("Enter your name: ");
+            string playerName = Console.ReadLine();
+
             Console.Write("Enter your galaxy size: ");
             int n = int.Parse(Console.ReadLine());
 
@@ -58,7 +61,7 @@ namespace NewEstablishment
             }
             if (galaxy.Hero.StarPower >= 50)
             {
-                Console.WriteLine("Good news! Stephen succeeded in collecting enough star power!");
+                Console.WriteLine($"Good news! {playerName} succeeded in collecting enough star power!");
                 Console.WriteLine($"Star power collected: {galaxy.Hero.StarPower}");
             }
             else
