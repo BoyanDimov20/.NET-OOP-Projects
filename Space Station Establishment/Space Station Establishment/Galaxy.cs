@@ -116,7 +116,8 @@ namespace NewEstablishment
             }
             else if (galaxy[Hero.Row + 1, Hero.Col] != '-')
             {
-                Hero.StarPower += int.Parse(galaxy[Hero.Row + 1, Hero.Col].ToString());
+                int startPowerIncome = int.Parse(galaxy[Hero.Row + 1, Hero.Col].ToString());
+                Hero.StarPower += AskQuestion(startPowerIncome);   // Interesting recursion!
                 galaxy[Hero.Row + 1, Hero.Col] = 'S';
             }
             else
@@ -153,7 +154,8 @@ namespace NewEstablishment
             }
             else if (galaxy[Hero.Row - 1, Hero.Col] != '-')
             {
-                Hero.StarPower += int.Parse(galaxy[Hero.Row - 1, Hero.Col].ToString());
+                int startPowerIncome = int.Parse(galaxy[Hero.Row - 1, Hero.Col].ToString());
+                Hero.StarPower += AskQuestion(startPowerIncome);   // Interesting recursion!
                 galaxy[Hero.Row - 1, Hero.Col] = 'S';
             }
             else
@@ -191,7 +193,8 @@ namespace NewEstablishment
             }
             else if (galaxy[Hero.Row, Hero.Col - 1] != '-')
             {
-                Hero.StarPower += int.Parse(galaxy[Hero.Row, Hero.Col - 1].ToString());
+                int startPowerIncome = int.Parse(galaxy[Hero.Row, Hero.Col - 1].ToString());
+                Hero.StarPower += AskQuestion(startPowerIncome);   // Interesting recursion!
                 galaxy[Hero.Row, Hero.Col - 1] = 'S';
             }
             else
@@ -231,7 +234,8 @@ namespace NewEstablishment
             }
             else if (galaxy[Hero.Row, Hero.Col + 1] != '-')
             {
-                Hero.StarPower += int.Parse(galaxy[Hero.Row, Hero.Col + 1].ToString());
+                int startPowerIncome = int.Parse(galaxy[Hero.Row, Hero.Col + 1].ToString());
+                Hero.StarPower += AskQuestion(startPowerIncome);   // Interesting recursion!
                 galaxy[Hero.Row, Hero.Col + 1] = 'S';
             }
             else
@@ -300,6 +304,35 @@ namespace NewEstablishment
                 }
             }
             Console.WriteLine();
+        }
+        public int AskQuestion(int income)
+        {
+            
+            Random random = new Random();
+            int value1 = random.Next(1, 51);
+            int value2 = random.Next(1, 51);
+            Console.Write($"{value1} + {value2} = ");
+            int result = int.Parse(Console.ReadLine());
+            if (result == value1 + value2)
+            {
+                Console.WriteLine($"Well done! You just gained {income} star power!");
+                return income;
+            }
+            else
+            {
+                Console.WriteLine("Wrong answer!");
+                if (income == 0)
+                {
+                    Console.WriteLine("Sorry, but you lost all your star power.");
+                    return 0;
+                }
+                else
+                {
+                    Console.WriteLine("Try again!");
+                    return AskQuestion(income / 2);
+                }
+            }
+            
         }
 
     }

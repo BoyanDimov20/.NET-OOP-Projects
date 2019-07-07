@@ -55,7 +55,6 @@ namespace NewEstablishment
                     galaxy.Show();
                 }
                 
-                
             }
             if (galaxy.Hero.StarPower >= 50)
             {
