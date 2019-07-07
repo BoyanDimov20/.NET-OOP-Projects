@@ -9,10 +9,12 @@ namespace NewEstablishment
         public int Row { get; set; }
         public int Col { get; set; }
         public int StarPower { get; set; }
+        public char Symbol { get; set; }
 
-        public Hero()
+        public Hero(char symbol)
         {
             StarPower = 0;
+            Symbol = symbol;
         }
 
 

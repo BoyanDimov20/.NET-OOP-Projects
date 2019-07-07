@@ -10,18 +10,20 @@ namespace NewEstablishment
             Console.Write("Enter your name: ");
             string playerName = Console.ReadLine();
 
+            Console.Write("Choose a symbol between \"S\", \"X\", \"A\",  \"B\": ");
+            char symbol = char.Parse(Console.ReadLine());
+
             Console.Write("Enter your galaxy size: ");
             int n = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Choose your difficulty between \"Easy\" and \"Hard\": " );
             string difficult = Console.ReadLine();
 
-            Galaxy galaxy = new Galaxy(n);
+            Galaxy galaxy = new Galaxy(n, symbol);
             galaxy.Generate();
 
-            // ReadMatrix();
             Console.WriteLine();
-            Console.WriteLine("If u can't find your S, type \"Where am i\""); // helps finding your S
+            Console.WriteLine($"If u can't find your {symbol}, type \"Where am i\""); // helps finding your S
             Console.WriteLine();
             Console.WriteLine("If u don't know the rules of the game, type \"Rules\"");
 

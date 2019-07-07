@@ -1,26 +1,17 @@
-﻿using System;
+﻿using MovementInGalaxy;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace NewEstablishment
 {
-    class Galaxy
+    class Galaxy : Movement
     {
-        int size;
-        char[,] galaxy;
-        public Hero Hero { get; set; }
 
-        public int Size
+        public Galaxy(int size, char heroSymbol)
         {
-            get { return size; }
-        }
-
-
-
-        public Galaxy(int size)
-        {
-            Hero = new Hero();
-            this.size = size;
+            Hero = new Hero(heroSymbol);
+            this.Size = size;
             galaxy = new char[size, size];
         }
 
@@ -36,12 +27,12 @@ namespace NewEstablishment
         public void Generate()
         {
             Random rng = new Random();
-            int randRow = rng.Next(0, size);
-            int randCol = rng.Next(0, size);
+            int randRow = rng.Next(0, Size);
+            int randCol = rng.Next(0, Size);
 
-            for (int i = 0; i < size; ++i)
+            for (int i = 0; i < Size; ++i)
             {
-                for (int j = 0; j < size; ++j)
+                for (int j = 0; j < Size; ++j)
                 {
                     int randomNumber = rng.Next(1, 10);
                     char randomValue = randomNumber.ToString()[0];  // LOL
@@ -54,7 +45,7 @@ namespace NewEstablishment
                     }
                 }
             }
-            galaxy[randRow, randCol] = 'S';
+            galaxy[randRow, randCol] = Hero.Symbol;
             Hero.Row = randRow;
             Hero.Col = randCol;
 
@@ -63,10 +54,10 @@ namespace NewEstablishment
 
         public void Show()
         {
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < Size; i++)
             {
                 Console.WriteLine();
-                for (int j = 0; j < size; j++)
+                for (int j = 0; j < Size; j++)
                 {
                     Console.Write(galaxy[i, j]);
                 }
@@ -76,12 +67,12 @@ namespace NewEstablishment
 
         public void Read()
         {
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < Size; i++)
             {
                 var command = Console.ReadLine().ToCharArray();
-                for (int j = 0; j < size; j++)
+                for (int j = 0; j < Size; j++)
                 {
-                    if (command[j] == 'S')
+                    if (command[j] == Hero.Symbol)
                     {
                         Hero.Row = i;
                         Hero.Col = j;
@@ -90,169 +81,12 @@ namespace NewEstablishment
                 }
             }
         }
-
-
-        public void Down()
-        {
-            bool teleported = false;
-            if (galaxy[Hero.Row + 1, Hero.Col] == 'O')
-            {
-                for (int i = 0; i < size && !teleported; i++)
-                {
-                    for (int j = 0; j < size; j++)
-                    {
-                        if (galaxy[i, j] == 'O' && i != Hero.Row + 1 && j != Hero.Col)
-                        {
-                            galaxy[Hero.Row, Hero.Col] = '-';
-                            galaxy[Hero.Row + 1, Hero.Col] = '-';
-                            galaxy[i, j] = 'S';
-                            Hero.Row = i;
-                            Hero.Col = j;
-                            teleported = true;
-                            break;
-                        }
-                    }
-                }
-            }
-            else if (galaxy[Hero.Row + 1, Hero.Col] != '-')
-            {
-                int startPowerIncome = int.Parse(galaxy[Hero.Row + 1, Hero.Col].ToString());
-                Hero.StarPower += AskQuestion(startPowerIncome);   // Interesting recursion!
-                galaxy[Hero.Row + 1, Hero.Col] = 'S';
-            }
-            else
-            {
-                galaxy[Hero.Row + 1, Hero.Col] = 'S';
-            }
-            if (!teleported)
-            {
-                galaxy[Hero.Row, Hero.Col] = '-';
-                Hero.Row++;
-            }
-        }
-        public void Up()
-        {
-            bool teleported = false;
-            if (galaxy[Hero.Row - 1, Hero.Col] == 'O')
-            {
-                for (int i = 0; i < size && !teleported; i++)
-                {
-                    for (int j = 0; j < size; j++)
-                    {
-                        if (galaxy[i, j] == 'O' && i != Hero.Row - 1 && j != Hero.Col)
-                        {
-                            galaxy[Hero.Row, Hero.Col] = '-';
-                            galaxy[Hero.Row - 1, Hero.Col] = '-';
-                            galaxy[i, j] = 'S';
-                            Hero.Row = i;
-                            Hero.Col = j;
-                            teleported = true;
-                            break;
-                        }
-                    }
-                }
-            }
-            else if (galaxy[Hero.Row - 1, Hero.Col] != '-')
-            {
-                int startPowerIncome = int.Parse(galaxy[Hero.Row - 1, Hero.Col].ToString());
-                Hero.StarPower += AskQuestion(startPowerIncome);   // Interesting recursion!
-                galaxy[Hero.Row - 1, Hero.Col] = 'S';
-            }
-            else
-            {
-                galaxy[Hero.Row - 1, Hero.Col] = 'S';
-            }
-            if (!teleported)
-            {
-                galaxy[Hero.Row, Hero.Col] = '-';
-                Hero.Row--;
-            }
-        }
-
-        public void Left()
-        {
-            bool teleported = false;
-            if (galaxy[Hero.Row, Hero.Col - 1] == 'O')
-            {
-                for (int i = 0; i < size && !teleported; i++)
-                {
-                    for (int j = 0; j < size; j++)
-                    {
-                        if (galaxy[i, j] == 'O' && i != Hero.Row && j != Hero.Col - 1)
-                        {
-                            galaxy[Hero.Row, Hero.Col] = '-';
-                            galaxy[Hero.Row, Hero.Col - 1] = '-';
-                            galaxy[i, j] = 'S';
-                            Hero.Row = i;
-                            Hero.Col = j;
-                            teleported = true;
-                            break;
-                        }
-                    }
-                }
-            }
-            else if (galaxy[Hero.Row, Hero.Col - 1] != '-')
-            {
-                int startPowerIncome = int.Parse(galaxy[Hero.Row, Hero.Col - 1].ToString());
-                Hero.StarPower += AskQuestion(startPowerIncome);   // Interesting recursion!
-                galaxy[Hero.Row, Hero.Col - 1] = 'S';
-            }
-            else
-            {
-                galaxy[Hero.Row, Hero.Col - 1] = 'S';
-            }
-            if (!teleported)
-            {
-                galaxy[Hero.Row, Hero.Col] = '-';
-                Hero.Col--;
-            }
-        }
-
-
-
-        public void Right()
-        {
-            bool teleported = false;
-            if (galaxy[Hero.Row, Hero.Col + 1] == 'O')
-            {
-                for (int i = 0; i < size && !teleported; i++)
-                {
-                    for (int j = 0; j < size; j++)
-                    {
-                        if (galaxy[i, j] == 'O' && i != Hero.Row && j != Hero.Col + 1)
-                        {
-                            galaxy[Hero.Row, Hero.Col] = '-';
-                            galaxy[Hero.Row, Hero.Col + 1] = '-';
-                            galaxy[i, j] = 'S';
-                            Hero.Row = i;
-                            Hero.Col = j;
-                            teleported = true;
-                            break;
-                        }
-                    }
-                }
-            }
-            else if (galaxy[Hero.Row, Hero.Col + 1] != '-')
-            {
-                int startPowerIncome = int.Parse(galaxy[Hero.Row, Hero.Col + 1].ToString());
-                Hero.StarPower += AskQuestion(startPowerIncome);   // Interesting recursion!
-                galaxy[Hero.Row, Hero.Col + 1] = 'S';
-            }
-            else
-            {
-                galaxy[Hero.Row, Hero.Col + 1] = 'S';
-            }
-            if (!teleported)
-            {
-                galaxy[Hero.Row, Hero.Col] = '-';
-                Hero.Col++;
-            }
-        }
+        
         public bool IsSave(string command)
         {
             if (command == "right")
             {
-                if (Hero.Col + 1 < size)
+                if (Hero.Col + 1 < Size)
                 {
                     return true;
                 }
@@ -279,7 +113,7 @@ namespace NewEstablishment
             }
             else if (command == "down")
             {
-                if (Hero.Row + 1 < size)
+                if (Hero.Row + 1 < Size)
                 {
                     return true;
                 }
@@ -291,13 +125,13 @@ namespace NewEstablishment
 
         public void ShowHero()
         {
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < Size; i++)
             {
                 Console.WriteLine();
-                for (int j = 0; j < size; j++)
+                for (int j = 0; j < Size; j++)
                 {
                     Console.Write(galaxy[i, j]);
-                    if (Hero.Row == i && j == size - 1)
+                    if (Hero.Row == i && j == Size - 1)
                     {
                         Console.Write("  <- Here you are");
                     }
@@ -305,34 +139,7 @@ namespace NewEstablishment
             }
             Console.WriteLine();
         }
-        public int AskQuestion(int income)
-        {
-            
-            Random random = new Random();
-            int value1 = random.Next(1, 51);
-            int value2 = random.Next(1, 51);
-            Console.Write($"{value1} + {value2} = ");
-            int result = int.Parse(Console.ReadLine());
-            if (result == value1 + value2)
-            {
-                Console.WriteLine($"Well done! You just gained {income} star power!");
-                return income;
-            }
-            else
-            {
-                Console.WriteLine("Wrong answer!");
-                if (income == 0)
-                {
-                    Console.WriteLine("Sorry, but you lost all your star power.");
-                    return 0;
-                }
-                else
-                {
-                    Console.WriteLine("Try again!");
-                    return AskQuestion(income / 2);
-                }
-            }
-        }
+        
         public void ShowRules()
         {
             Console.WriteLine("The symbol \'S\' is your position in the galaxy. ");
