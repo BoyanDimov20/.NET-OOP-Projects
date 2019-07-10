@@ -77,15 +77,8 @@ namespace NewEstablishment
                 Console.WriteLine("Bad news, the spaceship went to the void.");
                 Console.WriteLine($"Star power collected: {galaxy.Hero.StarPower}");
             }
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < n; j++)
-                {
-                    Console.Write(galaxy[i, j]);
-                }
-                Console.WriteLine();
-
-            }
+            Console.WriteLine();
+            galaxy.Show();
 
         }
 
