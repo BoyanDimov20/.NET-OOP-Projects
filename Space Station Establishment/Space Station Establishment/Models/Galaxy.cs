@@ -5,14 +5,17 @@ using System.Text;
 
 namespace NewEstablishment
 {
-    class Galaxy : Movement
+    class Galaxy
     {
+        public char[,] Map { get; private set; }
+        public int Size { get; private set; }
+        public Hero Hero { get; private set; }
 
-        public Galaxy(int size, char heroSymbol)
+        public Galaxy(int size, string heroName, char heroSymbol)
         {
-            Hero = new Hero(heroSymbol);
+            Hero = new Hero(heroName, heroSymbol);
             this.Size = size;
-            galaxy = new char[size, size];
+            Map = new char[size, size];
         }
 
 
@@ -20,7 +23,7 @@ namespace NewEstablishment
         {
             get
             {
-                return galaxy[row, col];
+                return Map[row, col];
             }
         }
 
@@ -36,16 +39,16 @@ namespace NewEstablishment
                 {
                     int randomNumber = rng.Next(1, 10);
                     char randomValue = randomNumber.ToString()[0];  // LOL
-                    galaxy[i, j] = randomValue;
+                    Map[i, j] = randomValue;
 
                     int randomEmpty = rng.Next(0, 3);
                     if (randomEmpty == 0)
                     {
-                        galaxy[i, j] = '-';
+                        Map[i, j] = '-';
                     }
                 }
             }
-            galaxy[randRow, randCol] = Hero.Symbol;
+            Map[randRow, randCol] = Hero.Symbol;
             Hero.Row = randRow;
             Hero.Col = randCol;
 
@@ -59,7 +62,7 @@ namespace NewEstablishment
                 Console.WriteLine();
                 for (int j = 0; j < Size; j++)
                 {
-                    Console.Write(galaxy[i, j]);
+                    Console.Write(Map[i, j]);
                 }
             }
             Console.WriteLine();
@@ -77,7 +80,7 @@ namespace NewEstablishment
                         Hero.Row = i;
                         Hero.Col = j;
                     }
-                    galaxy[i, j] = command[j];
+                    Map[i, j] = command[j];
                 }
             }
         }
@@ -90,7 +93,7 @@ namespace NewEstablishment
                 {
                     return true;
                 }
-                galaxy[Hero.Row, Hero.Col] = '-';
+                Map[Hero.Row, Hero.Col] = '-';
                 return false;
             }
             else if (command == "left")
@@ -99,7 +102,7 @@ namespace NewEstablishment
                 {
                     return true;
                 }
-                galaxy[Hero.Row, Hero.Col] = '-';
+                Map[Hero.Row, Hero.Col] = '-';
                 return false;
             }
             else if (command == "up")
@@ -108,7 +111,7 @@ namespace NewEstablishment
                 {
                     return true;
                 }
-                galaxy[Hero.Row, Hero.Col] = '-';
+                Map[Hero.Row, Hero.Col] = '-';
                 return false;
             }
             else if (command == "down")
@@ -117,7 +120,7 @@ namespace NewEstablishment
                 {
                     return true;
                 }
-                galaxy[Hero.Row, Hero.Col] = '-';
+                Map[Hero.Row, Hero.Col] = '-';
                 return false;
             }
             return true;
@@ -130,7 +133,7 @@ namespace NewEstablishment
                 Console.WriteLine();
                 for (int j = 0; j < Size; j++)
                 {
-                    Console.Write(galaxy[i, j]);
+                    Console.Write(Map[i, j]);
                     if (Hero.Row == i && j == Size - 1)
                     {
                         Console.Write("  <- Here you are");
@@ -139,20 +142,5 @@ namespace NewEstablishment
             }
             Console.WriteLine();
         }
-        
-        public void ShowRules()
-        {
-            Console.WriteLine("The symbol \'S\' is your position in the galaxy. ");
-            Console.WriteLine("The symbol \"-\" represents empty space.");
-            Console.WriteLine();
-            Console.WriteLine("You can move in all directions with the commands \"right\", \"left\", \"up\" and \"down\"");
-            Console.WriteLine();
-            Console.WriteLine("The goal is to collect 50 star power. ");
-            Console.WriteLine("If your answer is wrong, your star power income will be halfed.");
-            Console.WriteLine("In order to claim it you will be asked a math question.");
-        }
-
-
-
     }
 }
