@@ -1,5 +1,6 @@
 ﻿using MovementInGalaxy;
 using NewEstablishment;
+using Space_Station_Establishment.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,11 +14,9 @@ namespace Space_Station_Establishment.Core
             Console.Write("Enter your name: ");
             string playerName = Console.ReadLine();
 
-            Console.Write("Choose a symbol between \"S\", \"X\", \"A\",  \"B\": ");
-            char symbol = char.Parse(Console.ReadLine());
+            char symbol = ChooseSymbol();
 
-            Console.Write("Enter your galaxy size: ");
-            int galaxySize = int.Parse(Console.ReadLine());
+            int galaxySize = ChooseSize();
 
             Console.WriteLine("Choose your difficulty between \"Easy\" and \"Hard\": ");
             string difficult = Console.ReadLine();
@@ -42,6 +41,7 @@ namespace Space_Station_Establishment.Core
                 else if (command == "Rules")
                 {
                     GameOptions.ShowRules();
+
                 }
                 if (command == "right" && galaxy.IsSave(command))
                 {
@@ -67,6 +67,7 @@ namespace Space_Station_Establishment.Core
 
                 if (difficult == "Easy" && !showedPlace)
                 {
+                    Console.Clear();
                     galaxy.Show();
                 }
 
@@ -92,6 +93,55 @@ namespace Space_Station_Establishment.Core
             }
 
         }
-    
+
+        private static int ChooseSize()
+        {
+            Console.Write("Enter your galaxy size: ");
+            try
+            {
+                int input = int.Parse(Console.ReadLine());
+                if (input <= 0)
+                {
+                    throw new ArgumentException("Galaxy size cannot be negative.");
+                }
+                return input;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine(ExceptionMesseges.InvalidInputException);
+                return ChooseSize();
+            }
+            catch(ArgumentException ae)
+            {
+                Console.WriteLine(ae.Message);
+                return ChooseSize();
+            }
+
+        }
+        private static char ChooseSymbol()
+        {
+            Console.Write("Choose a symbol between \"S\", \"X\", \"A\",  \"B\": ");
+            try
+            {
+                char input = char.Parse(Console.ReadLine());
+                if (input != 'S' && input != 'X' && input != 'A' && input != 'B')
+                {
+                    throw new ArgumentException(ExceptionMesseges.InvalidInputException);
+                }
+                return input;
+            }
+            catch(ArgumentException ae)
+            {
+                Console.WriteLine(ae.Message);
+                return ChooseSymbol();
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine(ExceptionMesseges.InvalidInputException);
+                return ChooseSymbol();
+            }
+            
+
+        }
     }
 }

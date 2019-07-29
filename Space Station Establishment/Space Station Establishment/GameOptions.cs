@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Space_Station_Establishment.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,7 +13,21 @@ namespace Space_Station_Establishment
             int value1 = random.Next(1, 51);
             int value2 = random.Next(1, 51);
             Console.Write($"{value1} + {value2} = ");
-            int result = int.Parse(Console.ReadLine());
+            int result = 0;
+            try
+            {
+                result = int.Parse(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine(ExceptionMesseges.InvalidInputException);
+                return AskQuestion(income);
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("Something went wrong.. Try again!");
+                AskQuestion(income);
+            }
             if (result == value1 + value2)
             {
                 Console.WriteLine($"Well done! You just gained {income} star power!");
@@ -43,6 +58,10 @@ namespace Space_Station_Establishment
             Console.WriteLine("The goal is to collect 50 star power. ");
             Console.WriteLine("If your answer is wrong, your star power income will be halfed.");
             Console.WriteLine("In order to claim it you will be asked a math question.");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Type Enter to start the game.");
+            string command = Console.ReadLine();
         }
     }
 }

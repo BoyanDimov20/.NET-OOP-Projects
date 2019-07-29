@@ -57,6 +57,7 @@ namespace NewEstablishment
 
         public void Show()
         {
+            Console.WriteLine($"Current Star Power: {Hero.StarPower}");
             for (int i = 0; i < Size; i++)
             {
                 Console.WriteLine();
