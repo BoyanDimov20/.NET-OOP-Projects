@@ -1,0 +1,11 @@
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\bin\Debug\netcoreapp2.1\TicTacToe.deps.json
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\bin\Debug\netcoreapp2.1\TicTacToe.runtimeconfig.json
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\bin\Debug\netcoreapp2.1\TicTacToe.runtimeconfig.dev.json
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\bin\Debug\netcoreapp2.1\TicTacToe.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\bin\Debug\netcoreapp2.1\TicTacToe.pdb
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.csprojAssemblyReference.cache
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.AssemblyInfoInputs.cache
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.AssemblyInfo.cs
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\TicTacToe\TicTacToe\obj\Debug\netcoreapp2.1\TicTacToe.pdb

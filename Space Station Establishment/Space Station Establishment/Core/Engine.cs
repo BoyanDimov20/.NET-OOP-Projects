@@ -29,47 +29,24 @@ namespace Space_Station_Establishment.Core
             Console.WriteLine();
             Console.WriteLine("If u don't know the rules of the game, type \"Rules\"");
 
-            while (galaxy.Hero.StarPower < 50)
+            while (true)
             {
-                bool showedPlace = false;
                 var command = Console.ReadLine();
                 if (command == "Where am i")
                 {
                     galaxy.ShowHero();
-                    showedPlace = true;
                 }
                 else if (command == "Rules")
                 {
                     GameOptions.ShowRules();
-
                 }
-                if (command == "right" && galaxy.IsSave(command))
+                if (command == "Play")
                 {
-                    Movement.Right(galaxy, galaxy.Hero);
-                }
-                else if (command == "left" && galaxy.IsSave(command))
-                {
-                    Movement.Left(galaxy, galaxy.Hero);
-
-                }
-                else if (command == "down" && galaxy.IsSave(command))
-                {
-                    Movement.Down(galaxy, galaxy.Hero);
-                }
-                else if (command == "up" && galaxy.IsSave(command))
-                {
-                    Movement.Up(galaxy, galaxy.Hero);
-                }
-                else if (!galaxy.IsSave(command))
-                {
+                    galaxy.Show();
+                    Play(galaxy, difficult);
                     break;
                 }
-
-                if (difficult == "Easy" && !showedPlace)
-                {
-                    Console.Clear();
-                    galaxy.Show();
-                }
+                Console.WriteLine("Type \'Play\' to start the game.");
 
             }
             if (galaxy.Hero.StarPower >= 50)
@@ -92,6 +69,60 @@ namespace Space_Station_Establishment.Core
 
             }
 
+        }
+
+        private static void Play(Galaxy galaxy, string difficult)
+        {
+            while (galaxy.Hero.StarPower < 50)
+            {
+                bool showedPlace = false;
+                StringBuilder sb = new StringBuilder();
+
+                var key = Console.ReadKey();
+                if (key.Key == ConsoleKey.LeftArrow)
+                {
+                    sb.Append("left");
+                }
+                else if (key.Key == ConsoleKey.RightArrow)
+                {
+                    sb.Append("right");
+                }
+                else if (key.Key == ConsoleKey.DownArrow)
+                {
+                    sb.Append("down");
+                }
+                else if (key.Key == ConsoleKey.UpArrow)
+                {
+                    sb.Append("up");
+                }
+
+                string command = sb.ToString().TrimEnd();
+
+                if (command == "right" && galaxy.IsSave(command))
+                {
+                    Movement.Right(galaxy, galaxy.Hero);
+                }
+                else if (command == "left" && galaxy.IsSave(command))
+                {
+                    Movement.Left(galaxy, galaxy.Hero);
+
+                }
+                else if (command == "down" && galaxy.IsSave(command))
+                {
+                    Movement.Down(galaxy, galaxy.Hero);
+                }
+                else if (command == "up" && galaxy.IsSave(command))
+                {
+                    Movement.Up(galaxy, galaxy.Hero);
+                }
+
+                if (difficult == "Easy" && !showedPlace)
+                {
+                    Console.Clear();
+                    galaxy.Show();
+                }
+            }
+           
         }
 
         private static int ChooseSize()
