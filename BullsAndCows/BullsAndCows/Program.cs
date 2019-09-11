@@ -13,9 +13,17 @@ namespace BullsAndCows
             {
                 int bulls = 0;
                 int cows = 0;
-                //Console.WriteLine(game.IntNumber);
                 Console.Write("Guess the number: ");
-                int tryNum = int.Parse(Console.ReadLine());
+                int tryNum = 0;
+                try
+                {
+                    tryNum = int.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+
+                    continue;
+                }
 
                 if (tryNum == game.IntNumber)
                 {
