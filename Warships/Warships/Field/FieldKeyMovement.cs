@@ -8,9 +8,10 @@
         private int currentRow = 0;
         private int currentCol = 0;
         private int lastCondition;
+
         public FieldKeyMovement(BattleField field)
         {
-            this.field = new BattleField(field);
+            this.field = field;
             lastCondition = this.field.Condition[currentRow, currentCol];
             this.field.Condition[currentRow, currentCol] = -2;
         }

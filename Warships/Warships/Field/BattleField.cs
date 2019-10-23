@@ -1,26 +1,23 @@
 ﻿namespace Warships
 {
     using System;
-    using System.Collections.Generic;
     using Warships.Field;
 
     public class BattleField
     {
         private const int BattlefieldSize = 7;
-        public BattleField(BattleField field)
-        {
-            this.Condition = field.Condition;
-            this.Player = field.Player;
-        }
-        public BattleField(int player)
+        public BattleField()
         {
             SetCondition();
             GenerateShips();
-            Player = player;
         }
+        public BattleField(BattleField field)
+        {
+            this.Condition = field.Condition;
+        }
+        
         public int[,] Condition { get; private set; } = new int[BattlefieldSize, BattlefieldSize];
-        public int Player { get; set; }
-        public int Size => BattlefieldSize;
+        public int Size => BattlefieldSize; 
 
         public void GetField()
         {
@@ -43,7 +40,7 @@
                 }
                 Console.WriteLine();
             }
-        }
+        } 
         public void GetCheatedField()
         {
             for (int i = 0; i < BattlefieldSize; i++)
@@ -69,7 +66,7 @@
                 }
                 Console.WriteLine();
             }
-        }
+        } 
         public void FireAt(int row, int col)
         {
             if (FieldValidator.CheckPostion(row, col, BattlefieldSize))
@@ -100,7 +97,7 @@
                 }
             }
             return false;
-        }
+        } 
 
         private void GenerateShips()
         {
@@ -126,7 +123,7 @@
             }
 
 
-        }
+        } 
         private void SetCondition()
         {
             for (int i = 1; i < BattlefieldSize; i++)
@@ -136,7 +133,7 @@
                     Condition[i, j] = 0;
                 }
             }   
-        }
+        } 
 
 
     }

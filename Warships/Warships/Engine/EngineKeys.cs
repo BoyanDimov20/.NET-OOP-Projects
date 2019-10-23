@@ -1,13 +1,14 @@
 ﻿namespace Warships.Engine
 {
     using System;
+    using Warships.Common;
     using Warships.Engine.Contracts;
     using Warships.Field;
 
     public class EngineKeys : IEngine
     {
-        private BattleField FirstField = new BattleField(1);
-        private BattleField SecondField = new BattleField(2);
+        private BattleField FirstField = new BattleField();
+        private BattleField SecondField = new BattleField();
 
         public void Run()
         {
@@ -32,7 +33,7 @@
 
             GetChanges(field);
 
-            Console.WriteLine($"You fire your shot!");
+            Console.WriteLine(GlobalMessages.NextTurnMessage);
             var key = Console.ReadKey();
             Console.Clear();
 
