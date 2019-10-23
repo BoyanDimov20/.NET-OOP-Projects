@@ -1,0 +1,14 @@
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\bin\Release\netcoreapp2.1\win-x64\BullsAndCows.deps.json
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\bin\Release\netcoreapp2.1\win-x64\BullsAndCows.runtimeconfig.json
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\bin\Release\netcoreapp2.1\win-x64\BullsAndCows.runtimeconfig.dev.json
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\bin\Release\netcoreapp2.1\win-x64\BullsAndCows.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\bin\Release\netcoreapp2.1\win-x64\BullsAndCows.pdb
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\obj\Release\netcoreapp2.1\win-x64\BullsAndCows.csproj.CoreCompileInputs.cache
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\obj\Release\netcoreapp2.1\win-x64\BullsAndCows.AssemblyInfoInputs.cache
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\obj\Release\netcoreapp2.1\win-x64\BullsAndCows.AssemblyInfo.cs
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\obj\Release\netcoreapp2.1\win-x64\BullsAndCows.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\obj\Release\netcoreapp2.1\win-x64\BullsAndCows.pdb
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\bin\Release\netcoreapp2.1\win-x64\hostpolicy.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\bin\Release\netcoreapp2.1\win-x64\hostfxr.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\bin\Release\netcoreapp2.1\win-x64\BullsAndCows.exe
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\BullsAndCows\BullsAndCows\obj\Release\netcoreapp2.1\win-x64\BullsAndCows.csprojAssemblyReference.cache

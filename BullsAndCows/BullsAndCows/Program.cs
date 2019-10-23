@@ -24,7 +24,6 @@ namespace BullsAndCows
 
                     continue;
                 }
-
                 if (tryNum == game.IntNumber)
                 {
                     break;
@@ -56,6 +55,11 @@ namespace BullsAndCows
             Console.Beep();
             Console.WriteLine("You won!");
             Console.WriteLine("The number is " + game.IntNumber);
+            while (true)
+            {
+                var key = Console.ReadKey();
+                break;
+            }
 
         }
     }
