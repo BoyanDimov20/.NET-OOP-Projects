@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CashdeskManager/1.0.0": {
+        "dependencies": {
+          "CashdeskManager.Models": "1.0.0"
+        },
+        "runtime": {
+          "CashdeskManager.dll": {}
+        }
+      },
+      "CashdeskManager.Models/1.0.0": {
+        "runtime": {
+          "CashdeskManager.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CashdeskManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CashdeskManager.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
