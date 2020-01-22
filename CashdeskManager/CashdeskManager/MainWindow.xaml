@@ -19,61 +19,26 @@
         <Button Background="White" FontSize="25" Content="Add Customer" Margin="20,722,1674,264" Click="AddCustomer"/>
         <Button Background="White" FontSize="25" Content="Remove Customer" Margin="20,829,1674,157" Click="RemoveCustomer"/>
         <Button Background="White" FontSize="25" Content="Show Camera" Margin="518,936,1212,64" Click="ShowCamera"/>
-
-        <Grid Margin="518,90,1079,772">
-            <Image HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" Margin="0,42,0,0" Source="cashdesk.png"/>
-            <Label FontSize="25" Content="№1" Margin="5,0,231,166"/>
-            <TextBlock x:Name="CashMach1" FontSize="25" Text="In Line: 0" TextWrapping="Wrap" Margin="5,156,195,10"/>
-            <Button Content="Open/Close" Margin="128,156,115,15" RenderTransformOrigin="0.488,-0.121"/>
-
-        </Grid>
-        <Grid/>
-        <Grid Margin="841,90,756,772">
-            <Image x:Name="Icon2" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" Margin="0,42,0,0" Source="cashdesk.png"/>
-            <Label FontSize="25" Content="№2" Margin="5,0,231,166"/>
-            <TextBlock FontSize="25" Text="In Line: 0" TextWrapping="Wrap" Margin="5,156,195,10"/>
-            <Button Content="Open/Close" Margin="128,156,115,15" RenderTransformOrigin="0.488,-0.121" Click="OpenClose2"/>
-        </Grid>
-        <Grid Margin="1164,90,433,772">
-            <Image HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" Margin="0,42,0,0" Source="cashdesk.png"/>
-            <Label FontSize="25" Content="№3" Margin="5,0,231,166"/>
-            <TextBlock x:Name="CashMach3" FontSize="25" Text="In Line: 0" TextWrapping="Wrap" Margin="5,156,195,10"/>
-            <Button Content="Open/Close" Margin="128,156,115,15" RenderTransformOrigin="0.488,-0.121"/>
-
-        </Grid>
-        <Grid Margin="1487,90,110,772">
-            <Image HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" Margin="0,42,0,0" Source="cashdesk.png"/>
-            <Label FontSize="25" Content="№4" Margin="5,0,231,166"/>
-            <TextBlock x:Name="CashMach4" FontSize="25" Text="In Line: 0" TextWrapping="Wrap" Margin="5,156,195,10"/>
-            <Button Content="Open/Close" Margin="128,156,115,15" RenderTransformOrigin="0.488,-0.121"/>
-
-        </Grid>
-        <Grid Margin="518,346,1079,516">
-            <Image HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" Margin="0,42,0,0" Source="cashdesk.png"/>
-            <Label FontSize="25" Content="№5" Margin="5,0,231,166"/>
-            <TextBlock x:Name="CashMach5" FontSize="25" Text="In Line: 0" TextWrapping="Wrap" Margin="5,156,195,10"/>
-            <Button Content="Open/Close" Margin="128,156,115,15" RenderTransformOrigin="0.488,-0.121"/>
-        </Grid>
-        <Grid Margin="841,346,756,516">
-            <Image HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" Margin="0,42,0,0" Source="cashdesk.png"/>
-            <Label FontSize="25" Content="№6" Margin="5,0,231,166"/>
-            <TextBlock x:Name="CashMach6" FontSize="25" Text="In Line: 0" TextWrapping="Wrap" Margin="5,156,195,10"/>
-            <Button Content="Open/Close" Margin="128,156,115,15" RenderTransformOrigin="0.488,-0.121"/>
-        </Grid>
-        <Grid Margin="1164,346,433,516">
-            <Image HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" Margin="0,42,0,0" Source="cashdesk.png"/>
-            <Label FontSize="25" Content="№7" Margin="5,0,231,166"/>
-            <TextBlock x:Name="CashMach7" FontSize="25" Text="In Line: 0" TextWrapping="Wrap" Margin="5,156,195,10"/>
-            <Button Content="Open/Close" Margin="128,156,115,15" RenderTransformOrigin="0.488,-0.121"/>
-
-        </Grid>
-        <Grid Margin="1492,346,105,516">
-            <Image HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" Margin="0,42,0,0" Source="cashdesk.png" />
-            <Label FontSize="25" Content="№8" Margin="5,0,231,166"/>
-            <TextBlock x:Name="CashMach8" FontSize="25" Text="In Line: 0" TextWrapping="Wrap" Margin="5,156,195,10"/>
-            <Button Content="Open/Close" Margin="128,156,115,15" RenderTransformOrigin="0.488,-0.121"/>
-
-        </Grid>
-
+        <Grid Margin="764,-48,-764,48"/>
+        <local:CashMachineUserControl Margin="518,388,1163,535" x:Name="CashMachine1"/>
+        <local:CashMachineUserControl Margin="840,388,840,535" x:Name="CashMachine2"/>
+        <local:CashMachineUserControl Margin="1164,388,517,535" x:Name="CashMachine3"/>
+        <local:CashMachineUserControl Margin="1487,388,194,535" x:Name="CashMachine4"/>
+        <local:CashMachineUserControl Margin="518,118,1163,805" x:Name="CashMachine5"/>
+        <local:CashMachineUserControl Margin="840,118,840,805" x:Name="CashMachine6"/>
+        <local:CashMachineUserControl Margin="1164,118,517,805" x:Name="CashMachine7"/>
+        <local:CashMachineUserControl Margin="1487,118,194,805" x:Name="CashMachine8"/>
+        <StackPanel Margin="1714,10,10,1020">
+            <ToolBar>
+                <Menu Width="166">
+                    <MenuItem Header="Settings" Width="164">
+                        <MenuItem Header="Register User" Click="Register"/>
+                        <MenuItem Header="Show Report" Click="Report"/>
+                        <MenuItem Header="Config UI" Click="ManageUI"/>
+                        <MenuItem Header="Logout" Click="Logout"/>
+                    </MenuItem>
+                </Menu>
+            </ToolBar>
+        </StackPanel>
     </Grid>
 </Window>

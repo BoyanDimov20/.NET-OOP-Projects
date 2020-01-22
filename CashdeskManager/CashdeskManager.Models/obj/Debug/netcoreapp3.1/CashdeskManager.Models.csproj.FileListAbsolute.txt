@@ -6,3 +6,11 @@ C:\Users\Boyan\source\repos\CashdeskManager\CashdeskManager.Models\obj\Debug\net
 C:\Users\Boyan\source\repos\CashdeskManager\CashdeskManager.Models\obj\Debug\netcoreapp3.1\CashdeskManager.Models.AssemblyInfo.cs
 C:\Users\Boyan\source\repos\CashdeskManager\CashdeskManager.Models\obj\Debug\netcoreapp3.1\CashdeskManager.Models.dll
 C:\Users\Boyan\source\repos\CashdeskManager\CashdeskManager.Models\obj\Debug\netcoreapp3.1\CashdeskManager.Models.pdb
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager.Models\bin\Debug\netcoreapp3.1\CashdeskManager.Models.deps.json
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager.Models\bin\Debug\netcoreapp3.1\CashdeskManager.Models.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager.Models\bin\Debug\netcoreapp3.1\CashdeskManager.Models.pdb
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager.Models\obj\Debug\netcoreapp3.1\CashdeskManager.Models.csprojAssemblyReference.cache
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager.Models\obj\Debug\netcoreapp3.1\CashdeskManager.Models.AssemblyInfoInputs.cache
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager.Models\obj\Debug\netcoreapp3.1\CashdeskManager.Models.AssemblyInfo.cs
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager.Models\obj\Debug\netcoreapp3.1\CashdeskManager.Models.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager.Models\obj\Debug\netcoreapp3.1\CashdeskManager.Models.pdb

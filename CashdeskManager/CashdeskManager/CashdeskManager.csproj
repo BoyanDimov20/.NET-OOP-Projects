@@ -7,15 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="cashdesk.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CashdeskManager.Models\CashdeskManager.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="cashdesk.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="UI\" />
   </ItemGroup>
 
 </Project>

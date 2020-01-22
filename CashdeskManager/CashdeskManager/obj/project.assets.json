@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Boyan\\source\\repos\\CashdeskManager\\CashdeskManager\\CashdeskManager.csproj",
+      "projectUniqueName": "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\CashdeskManager\\CashdeskManager\\CashdeskManager.csproj",
       "projectName": "CashdeskManager",
-      "projectPath": "C:\\Users\\Boyan\\source\\repos\\CashdeskManager\\CashdeskManager\\CashdeskManager.csproj",
+      "projectPath": "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\CashdeskManager\\CashdeskManager\\CashdeskManager.csproj",
       "packagesPath": "C:\\Users\\Boyan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Boyan\\source\\repos\\CashdeskManager\\CashdeskManager\\obj\\",
+      "outputPath": "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\CashdeskManager\\CashdeskManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -56,8 +56,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Boyan\\source\\repos\\CashdeskManager\\CashdeskManager.Models\\CashdeskManager.Models.csproj": {
-              "projectPath": "C:\\Users\\Boyan\\source\\repos\\CashdeskManager\\CashdeskManager.Models\\CashdeskManager.Models.csproj"
+            "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\CashdeskManager\\CashdeskManager.Models\\CashdeskManager.Models.csproj": {
+              "projectPath": "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\CashdeskManager\\CashdeskManager.Models\\CashdeskManager.Models.csproj"
             }
           }
         }

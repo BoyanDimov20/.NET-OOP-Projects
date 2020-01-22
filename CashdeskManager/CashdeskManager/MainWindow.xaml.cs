@@ -21,10 +21,14 @@ namespace CashdeskManager
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<CashMachine> cashMachines = new List<CashMachine>();
+        List<CashMachineUserControl> cashMachines = new List<CashMachineUserControl>();
+
+        private int customersInLine = 0;
+
         public MainWindow()
         {
             InitializeComponent();
+            MainConfig();
         }
 
         private void ShowCamera(object sender, RoutedEventArgs e)
@@ -34,17 +38,57 @@ namespace CashdeskManager
 
         private void AddCustomer(object sender, RoutedEventArgs e)
         {
+            customersInLine++;
+            int min = cashMachines.Where(x => x.IsOpened).Min(x => x.CustomerCount);
+            cashMachines.Where(x => x.IsOpened).First(x => x.CustomerCount == min).WaitInLine();
         }
 
         private void RemoveCustomer(object sender, RoutedEventArgs e)
         {
-
+            cashMachines.First(x => x.CustomerCount > 0).LeftLine();
         }
 
-        private void OpenClose2(object sender, RoutedEventArgs e)
+        private void MainConfig()
         {
-            cashMachines.Add(new CashMachine(2, true, 0));
-            Icon2.Source = new BitmapImage(new Uri(@"C:\Users\Boyan\source\repos\CashdeskManager\CashdeskManager\cashdeskOpen.png"));
+            CashMachine1.MachineNumber.Content = "№1";
+            CashMachine2.MachineNumber.Content = "№2";
+            CashMachine3.MachineNumber.Content = "№3";
+            CashMachine4.MachineNumber.Content = "№4";
+            CashMachine5.MachineNumber.Content = "№5";
+            CashMachine6.MachineNumber.Content = "№6";
+            CashMachine7.MachineNumber.Content = "№7";
+            CashMachine8.MachineNumber.Content = "№8";
+
+            cashMachines.Add(CashMachine1);
+            cashMachines.Add(CashMachine2);
+            cashMachines.Add(CashMachine3);
+            cashMachines.Add(CashMachine4);
+            cashMachines.Add(CashMachine5);
+            cashMachines.Add(CashMachine6);
+            cashMachines.Add(CashMachine7);
+            cashMachines.Add(CashMachine8);
+
         }
+
+        private void Logout(object sender, RoutedEventArgs e)
+        {
+            var newPage = new LoginWindow();
+            this.Close();
+            newPage.Show();
+        }
+        private void Register(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Report(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ManageUI(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }

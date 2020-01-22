@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Boyan\\source\\repos\\CashdeskManager\\CashdeskManager.Models\\CashdeskManager.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\CashdeskManager\\CashdeskManager.Models\\CashdeskManager.Models.csproj",
       "projectName": "CashdeskManager.Models",
-      "projectPath": "C:\\Users\\Boyan\\source\\repos\\CashdeskManager\\CashdeskManager.Models\\CashdeskManager.Models.csproj",
+      "projectPath": "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\CashdeskManager\\CashdeskManager.Models\\CashdeskManager.Models.csproj",
       "packagesPath": "C:\\Users\\Boyan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Boyan\\source\\repos\\CashdeskManager\\CashdeskManager.Models\\obj\\",
+      "outputPath": "C:\\Users\\Boyan\\Documents\\GitHub\\.NET-OOP-Projects\\CashdeskManager\\CashdeskManager.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
