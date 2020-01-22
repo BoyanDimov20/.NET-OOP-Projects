@@ -38,9 +38,16 @@ namespace CashdeskManager
 
         private void AddCustomer(object sender, RoutedEventArgs e)
         {
+            
             customersInLine++;
             int min = cashMachines.Where(x => x.IsOpened).Min(x => x.CustomerCount);
             cashMachines.Where(x => x.IsOpened).First(x => x.CustomerCount == min).WaitInLine();
+            
+        }
+        
+        private void ManageCustomers()
+        {
+            
         }
 
         private void RemoveCustomer(object sender, RoutedEventArgs e)
