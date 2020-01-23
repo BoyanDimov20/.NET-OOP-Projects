@@ -5,21 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CashdeskManager"
         mc:Ignorable="d"
-        Title="CashDeskManager" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" WindowState="Maximized">
-    <Grid Background="LightGray" Width="1920" Height="1080">
+        Title="CashDeskManager" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        ResizeMode="CanResizeWithGrip">
+
+
+
+
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+
+        <Grid Background="LightGray" Width="1920" Height="1080">
+
         <Grid.RowDefinitions>
             <RowDefinition Height="107*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Margin="10,10,1439,361">
-            <TextBlock x:Name="ManagerInfo" Background="White" FontSize="30" Text="" TextWrapping="Wrap" Margin="0,50,0,52"/>
-            <Label FontWeight="Bold" FontSize="30" Content="Manager Information:" Margin="0,0,102,649"/>
+            <Label FontWeight="Bold" FontSize="20" Content="Manager Information:" Margin="0,14,149,649"/>
+            <StackPanel Margin="10,50,149,545">
+                <TextBlock x:Name="UserId" FontSize="15">Id: 1</TextBlock>
+                <TextBlock x:Name="FullName" FontSize="15">Full Name: Boyan Ivov Dimov</TextBlock>
+                <TextBlock x:Name="Username" FontSize="15">Username: SorionN</TextBlock>
+                <TextBlock x:Name="IsAdmin" FontSize="15">Role: Administrator</TextBlock>
+                <TextBlock x:Name="WorkingHours" FontSize="15">Working Hours: 0:03:25</TextBlock>
+            </StackPanel>
+            <Image x:Name="Camera" Margin="7,296,7,97" Source="missing camera.png" Visibility="Hidden"/>
+            <TextBlock x:Name="CameraMissingError" Background="{x:Null}" Foreground="Red" Text="" TextWrapping="Wrap" Margin="354,602,25,51" Visibility="Visible"/>
         </Grid>
-        <Label FontWeight="Bold" FontSize="30" Content="Control Panel:" Visibility="Visible" Margin="10,672,1439,10"/>
+        <Label FontWeight="Bold" FontSize="30" Content="Control Panel:" Visibility="Visible" Margin="10,618,1439,64"/>
         <Button Background="White" FontSize="25" Content="Add Customer" Margin="20,722,1674,264" Click="AddCustomer"/>
         <Button Background="White" FontSize="25" Content="Remove Customer" Margin="20,829,1674,157" Click="RemoveCustomer"/>
         <Button Background="White" FontSize="25" Content="Show Camera" Margin="518,936,1212,64" Click="ShowCamera"/>
-        <Grid Margin="764,-48,-764,48"/>
         <local:CashMachineUserControl Margin="518,388,1163,535" x:Name="CashMachine1"/>
         <local:CashMachineUserControl Margin="840,388,840,535" x:Name="CashMachine2"/>
         <local:CashMachineUserControl Margin="1164,388,517,535" x:Name="CashMachine3"/>
@@ -40,5 +56,9 @@
                 </Menu>
             </ToolBar>
         </StackPanel>
+        <Image Height="100" Width="100"/>
+            
     </Grid>
+    </ScrollViewer>
+
 </Window>

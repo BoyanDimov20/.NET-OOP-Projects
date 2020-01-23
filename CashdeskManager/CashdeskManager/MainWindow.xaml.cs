@@ -29,20 +29,30 @@ namespace CashdeskManager
         {
             InitializeComponent();
             MainConfig();
+            UserInfoConfig();
+        }
+
+        private void UserInfoConfig()
+        {
+            // TODO: Config Name/User
         }
 
         private void ShowCamera(object sender, RoutedEventArgs e)
         {
-
+            Camera.Visibility = Visibility.Visible;
+            CameraMissingError.Text = "Camera Missing!";
         }
 
         private void AddCustomer(object sender, RoutedEventArgs e)
         {
-            
+            if (!cashMachines.Any(x => x.IsOpened))
+            {
+                CameraMissingError.Text = "There's no open line!";
+                return;
+            }
             customersInLine++;
             int min = cashMachines.Where(x => x.IsOpened).Min(x => x.CustomerCount);
             cashMachines.Where(x => x.IsOpened).First(x => x.CustomerCount == min).WaitInLine();
-            
         }
         
         private void ManageCustomers()
@@ -52,6 +62,11 @@ namespace CashdeskManager
 
         private void RemoveCustomer(object sender, RoutedEventArgs e)
         {
+            if (!cashMachines.Any(x => x.CustomerCount > 0))
+            {
+                CameraMissingError.Text = "There's no customers left!";
+                return;
+            }
             cashMachines.First(x => x.CustomerCount > 0).LeftLine();
         }
 
@@ -96,6 +111,6 @@ namespace CashdeskManager
 
         }
 
-
+        
     }
 }
