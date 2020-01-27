@@ -1,5 +1,10 @@
-﻿using System;
+﻿using CashdeskManager.Models;
+using CashdeskManager.Models.Models;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,18 +22,29 @@ namespace CashdeskManager
     /// </summary>
     public partial class LoginWindow : Window
     {
-        string username = "Sorion";
-        string password = "123qwe";
+        private User loginUser;
+        private CashdeskManagerDbContext context = new CashdeskManagerDbContext();
+
         public LoginWindow()
         {
+            if(!(context.Database.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists())
+            {
+                context.Database.EnsureCreated();
+                RegisterWindow newPage = new RegisterWindow(true);
+
+                newPage.Show();
+                this.Close();
+            }
+                
             InitializeComponent();
         }
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            if (Username.Text.Equals(username) && Password.Password.Equals(password))
+            if (context.Users.Any(x => x.Username == Username.Text && x.Password == Password.Password))
             {
-                var newPage = new MainWindow();
+                loginUser = context.Users.First(x => x.Username == Username.Text && x.Password == Password.Password);
+                var newPage = new MainWindow(loginUser);
                 newPage.Show();
                 this.Close();
             }

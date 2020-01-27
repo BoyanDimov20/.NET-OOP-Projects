@@ -1,8 +1,10 @@
 ﻿using CashdeskManager.Models;
+using CashdeskManager.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace CashdeskManager
 {
@@ -23,20 +26,29 @@ namespace CashdeskManager
     {
         List<CashMachineUserControl> cashMachines = new List<CashMachineUserControl>();
 
+        private User loginUser;
         private int customersInLine = 0;
 
-        public MainWindow()
+        public MainWindow(User user)
         {
+            loginUser = user;
             InitializeComponent();
             MainConfig();
-            UserInfoConfig();
+            UserInfoConfigAsync();
         }
 
-        private void UserInfoConfig()
+        private void UserInfoConfigAsync()
         {
-            // TODO: Config Name/User
+            UserId.Text = "Id: " + loginUser.Id.ToString();
+            Username.Text = "Username: " + loginUser.Username;
+            FullName.Text = "Full Name: " + loginUser.FullName;
+            IsAdmin.Text = "Role: " + (loginUser.IsAdministrator ? "Administrator" : "Employee");
+            UpdateWatch();
         }
-
+        private void UpdateWatch()
+        {
+            // TODO
+        }
         private void ShowCamera(object sender, RoutedEventArgs e)
         {
             Camera.Visibility = Visibility.Visible;

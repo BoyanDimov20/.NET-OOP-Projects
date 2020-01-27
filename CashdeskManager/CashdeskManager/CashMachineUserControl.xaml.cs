@@ -22,7 +22,6 @@ namespace CashdeskManager
         public bool IsOpened { get; private set; } = false;
         public bool isOverflowed { get; private set; } = false;
         public int CustomerCount { get; set; } = 0;
-
         public CashMachineUserControl()
         {
             InitializeComponent();

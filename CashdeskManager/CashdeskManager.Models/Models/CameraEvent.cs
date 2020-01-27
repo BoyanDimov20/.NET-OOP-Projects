@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CashdeskManager.Models
 {
-    public class CameraEvents
+    public class CameraEvent
     {
         public int EventId { get; set; }
         public string EventName { get; set; } // Entry or Exit

@@ -1,0 +1,22 @@
+﻿<Window x:Class="CashdeskManager.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CashdeskManager"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="450" Width="800">
+    <Grid Background="LightGray">
+        <TextBox x:Name="Username" FontSize="15" Text="" TextWrapping="Wrap" Margin="224,112,286,294"/>
+        <TextBox x:Name="Name" FontSize="15" Text="" TextWrapping="Wrap" Margin="224,175,286,231"/>
+        <PasswordBox x:Name="Password" Margin="224,238,286,167" RenderTransformOrigin="-1.728,-0.373"/>
+        <Label FontSize="20" Content="Username" Margin="224,77,472,322"/>
+        <Label FontSize="20" Content="Full Name" Margin="224,140,472,259"/>
+        <Label FontSize="20" Content="Password" Margin="224,203,472,196"/>
+        <Button Background="White" Content="Register" Margin="420,345,286,59" Click="Continue"/>
+        <TextBlock x:Name="ErrorMessage" Foreground="Red" Text="" TextWrapping="Wrap" Margin="224,345,400,59"/>
+        <TextBlock FontSize="20" Text="Register as administrator" TextWrapping="Wrap" Margin="224,272,333,129"/>
+        <CheckBox x:Name="RegisterAsAdmin" Content="" Margin="492,280,286,137"/>
+
+    </Grid>
+</Window>
