@@ -20,10 +20,11 @@ namespace CashdeskManager.Models
         {
             modelBuilder.Entity<User>().Property(x => x.IsAdministrator).HasDefaultValue(false);
 
-            modelBuilder.Entity<CashMachineOpened>()
-                .HasOne(x => x.User)
-                .WithMany(x => x.CashMachineOpened)
+            modelBuilder.Entity<User>()
+                .HasMany(x => x.CashMachineOpened)
+                .WithOne(x => x.User)
                 .HasForeignKey(x => x.UserId);
+
         }
     }
 }

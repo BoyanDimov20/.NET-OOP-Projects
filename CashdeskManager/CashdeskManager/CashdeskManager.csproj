@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="background.jpg" />
+    <None Remove="background2.jpg" />
     <None Remove="missing camera.png" />
   </ItemGroup>
 
@@ -15,6 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="background.jpg" />
+    <Resource Include="background2.jpg" />
     <Resource Include="cashdesk.png" />
     <Resource Include="missing camera.png" />
   </ItemGroup>

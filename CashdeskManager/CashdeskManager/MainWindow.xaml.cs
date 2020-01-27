@@ -43,12 +43,13 @@ namespace CashdeskManager
             Username.Text = "Username: " + loginUser.Username;
             FullName.Text = "Full Name: " + loginUser.FullName;
             IsAdmin.Text = "Role: " + (loginUser.IsAdministrator ? "Administrator" : "Employee");
-            UpdateWatch();
+            UpdateWorkingHours();
         }
-        private void UpdateWatch()
+        private void UpdateWorkingHours()
         {
             // TODO
         }
+
         private void ShowCamera(object sender, RoutedEventArgs e)
         {
             Camera.Visibility = Visibility.Visible;
@@ -102,6 +103,11 @@ namespace CashdeskManager
             cashMachines.Add(CashMachine7);
             cashMachines.Add(CashMachine8);
 
+            foreach (var item in cashMachines)
+            {
+                item.LoginUser = loginUser;
+            }
+
         }
 
         private void Logout(object sender, RoutedEventArgs e)
@@ -112,15 +118,17 @@ namespace CashdeskManager
         }
         private void Register(object sender, RoutedEventArgs e)
         {
-
+            RegisterWindow newPage = new RegisterWindow(loginUser.IsAdministrator);
+            newPage.Show();
+            this.Close();
         }
         private void Report(object sender, RoutedEventArgs e)
         {
-
+            // TO DO
         }
         private void ManageUI(object sender, RoutedEventArgs e)
         {
-
+            // TO DO
         }
 
         

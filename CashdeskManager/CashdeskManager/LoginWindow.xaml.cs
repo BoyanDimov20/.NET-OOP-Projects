@@ -35,7 +35,6 @@ namespace CashdeskManager
                 newPage.Show();
                 this.Close();
             }
-                
             InitializeComponent();
         }
 
