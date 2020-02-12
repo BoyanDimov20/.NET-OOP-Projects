@@ -6,12 +6,15 @@
         xmlns:local="clr-namespace:CashdeskManager"
         mc:Ignorable="d"
         Title="LoginWindow" Height="450" Width="800">
-    <Grid Background="LightGray" Height="428">
-        <Label FontSize="20" Content="Username" Margin="262,78,354,318"/>
-        <TextBox x:Name="Username" FontSize="15" Text="" TextWrapping="Wrap" Margin="262,116,262,275"/>
-        <Label FontSize="20" Content="Password" Margin="262,163,354,233"/>
-        <Button Content="Log in" Margin="430,256,262,138" Click="Login"/>
-        <TextBlock x:Name="ErrorMessage" Foreground="Red" FontSize="12" Text="" TextWrapping="Wrap" Margin="266,256,370,138"/>
-        <PasswordBox x:Name="Password" Margin="262,200,262,191"/>
+    <Grid Height="428">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\Resources\background.jpg"/>
+        </Grid.Background>
+        <Label FontSize="20" Content="Username" Margin="10,111,606,285"/>
+        <TextBox x:Name="Username" FontSize="15" Text="" TextWrapping="Wrap" Margin="10,149,514,242"/>
+        <Label FontSize="20" Content="Password" Margin="10,196,606,200"/>
+        <Button Content="Log in" Margin="178,289,514,105" Click="Login"/>
+        <TextBlock x:Name="ErrorMessage" Foreground="Red" FontSize="12" Text="" TextWrapping="Wrap" Margin="14,289,622,105"/>
+        <PasswordBox x:Name="Password" Margin="10,233,514,158"/>
     </Grid>
 </Window>

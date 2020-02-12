@@ -9,7 +9,7 @@ namespace CashdeskManager.Models
 {
     public class CashMachineOpened
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key]
         public int Id { get; set; }
 
         [Required]
@@ -18,6 +18,6 @@ namespace CashdeskManager.Models
         public int CustomersServiced { get; set; }
 
         public int UserId { get; set; }
-        public User User { get; set; }
+        public virtual User User { get; set; }
     }
 }

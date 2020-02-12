@@ -16,7 +16,7 @@
 
         <Grid Width="1920" Height="1080">
             <Grid.Background>
-                <ImageBrush ImageSource="background2.jpg"/>
+                <ImageBrush ImageSource="C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\Resources\background2.jpg"/>
             </Grid.Background>
 
             <Grid.RowDefinitions>
@@ -32,7 +32,7 @@
                 <TextBlock x:Name="IsAdmin" FontSize="15">Role: Administrator</TextBlock>
                 <TextBlock x:Name="WorkingHours" FontSize="15">Working Hours: 0:03:25</TextBlock>
             </StackPanel>
-            <Image x:Name="Camera" Margin="7,296,7,97" Source="missing camera.png" Visibility="Hidden"/>
+                <Image x:Name="Camera" Margin="7,296,7,97" Source="C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\Resources\missing camera.png" Visibility="Hidden"/>
             <TextBlock x:Name="CameraMissingError" Background="{x:Null}" Foreground="Red" Text="" TextWrapping="Wrap" Margin="354,602,25,51" Visibility="Visible"/>
         </Grid>
         <Label FontWeight="Bold" FontSize="30" Content="Control Panel:" Visibility="Visible" Margin="10,618,1439,64"/>

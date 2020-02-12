@@ -64,8 +64,8 @@ namespace CashdeskManager
                 return;
             }
             customersInLine++;
-            int min = cashMachines.Where(x => x.IsOpened).Min(x => x.CustomerCount);
-            cashMachines.Where(x => x.IsOpened).First(x => x.CustomerCount == min).WaitInLine();
+            int min = cashMachines.Where(x => x.IsOpened).Min(x => x.CurrentCustomerCount);
+            cashMachines.Where(x => x.IsOpened).First(x => x.CurrentCustomerCount == min).WaitInLine();
         }
         
         private void ManageCustomers()
@@ -75,12 +75,12 @@ namespace CashdeskManager
 
         private void RemoveCustomer(object sender, RoutedEventArgs e)
         {
-            if (!cashMachines.Any(x => x.CustomerCount > 0))
+            if (!cashMachines.Any(x => x.CurrentCustomerCount > 0))
             {
                 CameraMissingError.Text = "There's no customers left!";
                 return;
             }
-            cashMachines.First(x => x.CustomerCount > 0).LeftLine();
+            cashMachines.First(x => x.CurrentCustomerCount > 0).LeftLine();
         }
 
         private void MainConfig()

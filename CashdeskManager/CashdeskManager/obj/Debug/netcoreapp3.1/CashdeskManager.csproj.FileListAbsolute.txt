@@ -37,12 +37,6 @@ C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManage
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\CashdeskManager.csproj.CopyComplete
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\CashdeskManager.dll
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\CashdeskManager.pdb
-C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\CashMachineUserControl.g.cs
-C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\LoginWindow.g.cs
-C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\CashMachineUserControl.baml
-C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\LoginWindow.baml
-C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -70,5 +64,11 @@ C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManage
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\CashMachineUserControl.g.cs
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\LoginWindow.g.cs
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\RegisterWindow.g.cs
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\CashMachineUserControl.baml
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\LoginWindow.baml
+C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\obj\Debug\netcoreapp3.1\RegisterWindow.baml

@@ -7,17 +7,20 @@
         mc:Ignorable="d"
         Title="RegisterWindow" Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
-    <Grid Background="LightGray" Height="450" Width="800">
-        <TextBox x:Name="Username" FontSize="15" Text="" TextWrapping="Wrap" Margin="224,62,286,344"/>
-        <TextBox x:Name="Name" FontSize="15" Text="" TextWrapping="Wrap" Margin="224,141,286,265"/>
-        <PasswordBox x:Name="Password" Margin="224,225,286,180" RenderTransformOrigin="-1.728,-0.373"/>
-        <Label FontSize="20" Content="Username" Margin="224,27,472,388" RenderTransformOrigin="0.589,-0.111"/>
-        <Label FontSize="20" Content="Full Name" Margin="224,106,472,309"/>
-        <Label FontSize="20" Content="Password" Margin="224,185,472,225"/>
-        <Button Background="White" Content="Register" Margin="420,345,286,59" Click="Continue"/>
-        <TextBlock x:Name="ErrorMessage" Foreground="Red" Text="" TextWrapping="Wrap" Margin="224,345,400,59"/>
-        <TextBlock FontSize="20" Text="Register as administrator" TextWrapping="Wrap" Margin="224,270,333,131"/>
-        <CheckBox x:Name="RegisterAsAdmin" Content="" Margin="492,283,286,134" RenderTransformOrigin="0.409,1.183"/>
+    <Grid Height="450" Width="800">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\Resources\background.jpg"/>
+        </Grid.Background>
+        <TextBox x:Name="Username" FontSize="15" Text="" TextWrapping="Wrap" Margin="10,82,500,324"/>
+        <TextBox x:Name="Name" FontSize="15" Text="" TextWrapping="Wrap" Margin="10,161,500,245"/>
+        <PasswordBox x:Name="Password" Margin="10,245,500,160" RenderTransformOrigin="-1.728,-0.373"/>
+        <Label FontSize="20" Content="Username" Margin="10,47,686,368" RenderTransformOrigin="0.589,-0.111"/>
+        <Label FontSize="20" Content="Full Name" Margin="10,126,686,289"/>
+        <Label FontSize="20" Content="Password" Margin="10,205,686,205"/>
+        <Button Background="White" Content="Register" Margin="206,365,500,39" Click="Continue"/>
+        <TextBlock x:Name="ErrorMessage" Foreground="Red" Text="" TextWrapping="Wrap" Margin="10,365,614,39"/>
+        <TextBlock FontSize="20" Text="Register as administrator" TextWrapping="Wrap" Margin="10,290,547,111"/>
+        <CheckBox x:Name="RegisterAsAdmin" Content="" Margin="278,303,500,114" RenderTransformOrigin="0.409,1.183"/>
 
     </Grid>
 </Window>

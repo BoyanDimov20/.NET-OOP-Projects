@@ -17,14 +17,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="background.jpg" />
-    <Resource Include="background2.jpg" />
-    <Resource Include="cashdesk.png" />
-    <Resource Include="missing camera.png" />
+    <Resource Include="Resources\background.jpg" />
+    <Resource Include="Resources\background2.jpg" />
+    <Resource Include="Resources\cashdesk.png" />
+    <Resource Include="Resources\missing camera.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
     <Folder Include="UI\" />
   </ItemGroup>
 

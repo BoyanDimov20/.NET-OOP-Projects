@@ -20,7 +20,7 @@ namespace CashdeskManager
     /// <summary>
     /// Interaction logic for CashMachineUserControl.xaml
     /// </summary>
-    public partial class CashMachineUserControl : UserControl, ICustomerCountIn, ICustomerCountOut, ICloseState, IOpenState
+    public partial class CashMachineUserControl : UserControl, ICustomerCountIn, ICustomerCountOut, ICloseState, IOpenState, ICustomerInfo
     {
         private int totalCustomersServiced = 0;
         private CashdeskManagerDbContext context = new CashdeskManagerDbContext();
@@ -31,9 +31,10 @@ namespace CashdeskManager
         }
 
         public bool IsOpened { get; private set; } = false;
-        public bool isOverflowed { get; private set; } = false;
-        public int CustomerCount { get; set; } = 0;
+        public bool IsOverflow { get; private set; } = false;
+        public int CurrentCustomerCount { get; set; } = 0;
         public User LoginUser { get; set; }
+        public int TotalCustomerCount => totalCustomersServiced;
 
         private void OpenClose(object sender, RoutedEventArgs e)
         {
@@ -48,41 +49,42 @@ namespace CashdeskManager
         }
         public void WaitInLine()
         {
-            CustomerCount++;
+            CurrentCustomerCount++;
             totalCustomersServiced++;
-            this.CustomerCountLabel.Text = $"In Line: {this.CustomerCount}";
-            if (CustomerCount > 4 && !isOverflowed)
+            this.CustomerCountLabel.Text = $"In Line: {this.CurrentCustomerCount}";
+            if (CurrentCustomerCount > 4 && !IsOverflow)
             {
-                isOverflowed = true;
-                this.Icon.Source = new BitmapImage(new Uri(@"C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\cashdeskOverflow.png"));
+                IsOverflow = true;
+                this.Icon.Source = new BitmapImage(new Uri(@"C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\Resources\cashdeskOverflow.png"));
             }
         }
         public void LeftLine()
         {
-            CustomerCount--;
-            this.CustomerCountLabel.Text = $"In Line: {this.CustomerCount}";
-            if (CustomerCount <= 4 && isOverflowed)
+            CurrentCustomerCount--;
+            this.CustomerCountLabel.Text = $"In Line: {this.CurrentCustomerCount}";
+            if (CurrentCustomerCount <= 4 && IsOverflow)
             {
-                isOverflowed = false;
-                this.Icon.Source = new BitmapImage(new Uri(@"C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\cashdeskOpen.png"));
+                IsOverflow = false;
+                this.Icon.Source = new BitmapImage(new Uri(@"C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\Resources\cashdeskOpen.png"));
             }
         }
         public void Open()
         {
             IsOpened = true;
-            this.Icon.Source = new BitmapImage(new Uri(@"C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\cashdeskOpen.png"));
+            this.Icon.Source = new BitmapImage(new Uri(@"C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\Resources\cashdeskOpen.png"));
         }
         public void Close()
         {
             IsOpened = false;
-            CustomerCount = 0;
+            CurrentCustomerCount = 0;
             this.CustomerCountLabel.Text = $"In Line: 0";
-            this.Icon.Source = new BitmapImage(new Uri(@"C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\cashdesk.png"));
+            this.Icon.Source = new BitmapImage(new Uri(@"C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\Resources\cashdesk.png"));
+
             CashMachineOpened newEntity = new CashMachineOpened
             {
                 Name = this.MachineNumber.Content.ToString(),
                 CustomersServiced = this.totalCustomersServiced,
-                User = this.LoginUser
+                UserId = this.LoginUser.Id,
             };
 
             context.Add(newEntity);

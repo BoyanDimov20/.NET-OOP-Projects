@@ -27,7 +27,7 @@ namespace CashdeskManager
 
         public LoginWindow()
         {
-            if(!(context.Database.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists())
+            if(!(context.Database.GetService<   IDatabaseCreator>() as RelationalDatabaseCreator).Exists())
             {
                 context.Database.EnsureCreated();
                 RegisterWindow newPage = new RegisterWindow(true);

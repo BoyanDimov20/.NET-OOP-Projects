@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:CashdeskManager"
              mc:Ignorable="d" Height="147" Width="239">
     <Grid Margin="0,0,-63,-61">
-        <Image x:Name="Icon" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" Margin="0,50,0,0" Source="cashdesk.png"/>
+        <Image x:Name="Icon" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="100" Margin="0,50,0,0" Source="C:\Users\Boyan\Documents\GitHub\.NET-OOP-Projects\CashdeskManager\CashdeskManager\Resources\cashdesk.png"/>
         <Label x:Name="MachineNumber" FontSize="25" Content="№5" Margin="0,8,215,158"/>
         <TextBlock x:Name="CustomerCountLabel" FontSize="25" Text="In Line: 0" TextWrapping="Wrap" Margin="0,156,179,10"/>
         <Button Content="Open/Close" Margin="151,156,71,15" RenderTransformOrigin="0.488,-0.121" Click="OpenClose"/>

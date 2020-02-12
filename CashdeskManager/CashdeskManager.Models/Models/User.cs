@@ -22,6 +22,6 @@ namespace CashdeskManager.Models.Models
         [Required]
         public bool IsAdministrator { get; set; }
 
-        public ICollection<CashMachineOpened> CashMachineOpened { get; set; }
+        public virtual ICollection<CashMachineOpened> CashMachineOpened { get; set; }
     }
 }
